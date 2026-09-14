@@ -3,9 +3,10 @@ Extract frames from user's video into public/sequence/hero/
 """
 
 import os
+import sys
 import cv2
 
-VIDEO_PATH = r"C:\Users\rajau\Downloads\Robot_head_camera_orbit_1080p_20260914123212.mp4"
+VIDEO_PATH = sys.argv[1] if len(sys.argv) > 1 else os.path.join("public", "media", "robot_orbit.mp4")
 OUTPUT_DIR = os.path.join("public", "sequence", "hero")
 TARGET_WIDTH = 1280
 TARGET_HEIGHT = 720
